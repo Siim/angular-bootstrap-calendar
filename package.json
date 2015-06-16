@@ -8,6 +8,7 @@
     "moment": "~2.10.3"
   },
   "devDependencies": {
+    "chalk": "latest",
     "eslint": "~0.22.1",
     "eslint-plugin-angular": "0.0.7",
     "gulp": "~3.9.0",
@@ -40,7 +41,7 @@
     "karma-mocha": "~0.1.10",
     "karma-ng-html2js-preprocessor": "~0.1.2",
     "karma-phantomjs-launcher": "~0.2.0",
-    "main-bower-files": "~2.8.0",
+    "main-bower-files": "latest",
     "mocha": "~2.2.1",
     "open": "0.0.5",
     "phantomjs": "~1.9.17",

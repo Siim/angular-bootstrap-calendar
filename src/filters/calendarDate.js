@@ -1,21 +1,21 @@
 'use strict';
 
 angular
-  .module('mwl.calendar')
-  .filter('calendarDate', function(calendarHelper, calendarConfig) {
+	.module('mwl.calendar')
+	.filter('calendarDate', function (calendarHelper, calendarConfig) {
 
-    function calendarDate(date, format, getFromConfig) {
+		function calendarDate(date, format, getFromConfig) {
 
-      if (getFromConfig === true) {
-        format = calendarConfig.dateFormats[format];
-      }
+			if (getFromConfig === true) {
+				format = calendarConfig.dateFormats[format];
+			}
 
-      return calendarHelper.formatDate(date, format);
+			return calendarHelper.formatDate(date, format);
 
-    }
+		}
 
-    calendarDate.$stateful = true;
+		calendarDate.$stateful = true;
 
-    return calendarDate;
+		return calendarDate;
 
-  });
+	});

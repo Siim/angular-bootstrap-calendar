@@ -754,6 +754,7 @@
             restrict: 'EA',
             require: '^mwlCalendar',
             scope: {
+                customData: '=',
                 events: '=',
                 currentDay: '=',
                 onEventClick: '=',
@@ -816,6 +817,7 @@
             restrict: 'EA',
             require: '^mwlCalendar',
             scope: {
+                customData: '=',
                 events: '=',
                 currentDay: '=',
                 onEventClick: '=',
@@ -862,11 +864,14 @@
             scope: {
                 isOpen: '=',
                 events: '=',
+                day: '=',
+                currentDay: '=',
                 onEventClick: '=',
                 editEventHtml: '=',
                 onEditEventClick: '=',
                 deleteEventHtml: '=',
-                onDeleteEventClick: '='
+                onDeleteEventClick: '=',
+                customData: '='
             }
         };
     });
@@ -938,6 +943,8 @@
             restrict: 'EA',
             require: '^mwlCalendar',
             scope: {
+                day: '=',
+                customData: '=',
                 events: '=',
                 currentDay: '=',
                 onEventClick: '=',
@@ -1034,6 +1041,7 @@
             restrict: 'EA',
             require: '^mwlCalendar',
             scope: {
+                customData: '=',
                 events: '=',
                 currentDay: '=',
                 onEventClick: '=',
@@ -1085,7 +1093,8 @@
                 $scope.events = $scope.events.map(function (event, index) {
                     Object.defineProperty(event, '$id', {
                         enumerable: false,
-                        value: index
+                        value: index,
+                        configurable: true
                     });
                     return event;
                 });
@@ -1124,6 +1133,7 @@
             templateUrl: 'src/templates/calendar.html',
             restrict: 'EA',
             scope: {
+                customData: '=',
                 events: '=',
                 view: '=',
                 viewTitle: '=',
